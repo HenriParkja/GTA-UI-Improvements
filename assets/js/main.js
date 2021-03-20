@@ -113,6 +113,13 @@ $('document').ready(function() {
                 item: itemSelected
             }));
     })
+
+    document.getElementById('button-give').addEventListener('click', function(event) {
+        var itemSelected = document.getElementsByClassName('selected')[0].id;
+        $.post('http://t0sic_inventoryui/give', JSON.stringify({
+                item: itemSelected
+            }));
+    })
     document.getElementById("button").addEventListener("click", function(event) {
         var itemSelected = document.getElementsByClassName('selected')[0];
         if (document.getElementsByClassName('selected')[0].id == 'money') {

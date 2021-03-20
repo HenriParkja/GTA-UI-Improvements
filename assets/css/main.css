@@ -25,11 +25,12 @@ html {
     --item-float: left;
     --item-bg-position: center;
     --item-bg-color: rgb(31, 30, 43);
-    --item-shadow: 11px 15px 13px 0px rgba(0,0,0,0.75);
+    --item-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
     --item-border-radius: 5px;
     --item-border: rgb(145, 9, 9) solid 1px;
     --item-margin: 1%;
     --main-color: rgb(0, 230, 247);
+    --btn-bg-color: rgb(145, 9, 9);
 }
 
 .default {
@@ -93,21 +94,6 @@ input[type=number]::-webkit-outer-spin-button {
 /* ID's */
 
 #button-use {
-  border: none;
-  position: relative;
-  padding: 1% 2.2%;
-  border-radius: 10px;
-  background: var(--main-color);
-  color: black;
-  margin-top: 10%;
-  margin-left: 10%;
-  font-size: 150%;
-  width: 80%;
-  border: 1px solid var(--main-color);
-  -webkit-box-shadow: var(--item-shadow);
-  -moz-box-shadow: var(--item-shadow);
-  box-shadow: var(--item-shadow);
-  margin-bottom: 10%;
 }
 
 #button-use:hover {
@@ -121,19 +107,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 #button {
-  border: none;
-  font-size: 150%;
-  padding: 1% 1.9%;
-  position: relative;
-  background: var(--main-color);
-  color: black;
-  border-radius: 10px;
-  margin-left: 10%;
-  width: 80%;
-  border: 1px solid var(--main-color);
-  -webkit-box-shadow: var(--item-shadow);
-  -moz-box-shadow: var(--item-shadow);
-  box-shadow: var(--item-shadow);
+
 }
 
 #drop-count {
@@ -142,16 +116,16 @@ input[type=number]::-webkit-outer-spin-button {
   margin-top: 10%;
   margin-left: 10%;
   width: 75%;
-  background: var(--main-color);
+  background-color: var(--btn-bg-color);
   color: black;
   border: none;
   padding: 1% 1.9%;
   border-radius: 10px;
   text-align: center;
-  border: 1px solid var(--main-color);
   -webkit-box-shadow: var(--item-shadow);
   -moz-box-shadow: var(--item-shadow);
   box-shadow: var(--item-shadow);
+  color: white;
 }
 
 #drag2 > div:active {
@@ -224,7 +198,7 @@ input[type=number]::-webkit-outer-spin-button {
   padding: 10px 10px 10px 10px;
   position: absolute;
   top: 100%;
-  width: 50%;
+  width: calc(100% + 30% - 20px);
   background-color: rgb(25, 25, 35);
 }
 
@@ -290,11 +264,12 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .item-container {
-  width: 12%;
+  width: 30%;
   height: 30%;
   position: absolute;
-  top: 45%;
-  left: 37%;
+  bottom: 0;
+  right: 0;
+  margin-right: -30%;
   background: rgb(25, 25, 35);
   z-index: 999;
   display: flex;
@@ -324,6 +299,30 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 /* CLASSES */
+
+.btn {
+
+  border: none;
+  position: relative;
+  padding: 1% 2.2%;
+  border-radius: 10px;
+  background-color: var(--btn-bg-color);
+  color: black;
+  margin-top: 10%;
+  margin-left: 10%;
+  font-size: 150%;
+  width: 80%;
+  -webkit-box-shadow: var(--item-shadow);
+  -moz-box-shadow: var(--item-shadow);
+  box-shadow: var(--item-shadow);
+  color: white;
+}
+
+.btn:hover {
+  transition: 500ms;
+  background: white;
+  color: black;
+}
 
 .item-test {
   height: 100px;
