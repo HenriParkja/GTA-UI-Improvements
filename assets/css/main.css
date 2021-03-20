@@ -6,6 +6,11 @@
     overflow: hidden;
 }
 
+@font-face {
+  font-family:"SignPainter";
+  src: url("../fonts/SignPainter-HouseScript.ttf") format("truetype");
+}
+
 *:focus {
   outline: none;
 }
@@ -22,7 +27,7 @@ html {
     --item-bg-color: rgb(31, 30, 43);
     --item-shadow: 11px 15px 13px 0px rgba(0,0,0,0.75);
     --item-border-radius: 5px;
-    --item-border: rgb(0, 230, 247) solid 1px;
+    --item-border: rgb(145, 9, 9) solid 1px;
     --item-margin: 1%;
     --main-color: rgb(0, 230, 247);
 }
@@ -89,18 +94,20 @@ input[type=number]::-webkit-outer-spin-button {
 
 #button-use {
   border: none;
-  position: absolute;
+  position: relative;
   padding: 1% 2.2%;
   border-radius: 10px;
   background: var(--main-color);
   color: black;
   margin-top: 10%;
-  margin-left: 3.2%;
+  margin-left: 10%;
   font-size: 150%;
+  width: 80%;
   border: 1px solid var(--main-color);
   -webkit-box-shadow: var(--item-shadow);
   -moz-box-shadow: var(--item-shadow);
   box-shadow: var(--item-shadow);
+  margin-bottom: 10%;
 }
 
 #button-use:hover {
@@ -117,12 +124,12 @@ input[type=number]::-webkit-outer-spin-button {
   border: none;
   font-size: 150%;
   padding: 1% 1.9%;
-  position: absolute;
+  position: relative;
   background: var(--main-color);
   color: black;
   border-radius: 10px;
-  margin-top: 15%;
-  margin-left: 3.2%;
+  margin-left: 10%;
+  width: 80%;
   border: 1px solid var(--main-color);
   -webkit-box-shadow: var(--item-shadow);
   -moz-box-shadow: var(--item-shadow);
@@ -132,19 +139,16 @@ input[type=number]::-webkit-outer-spin-button {
 #drop-count {
   z-index: 999;
   font-size: 150%;
-  margin-top: 44%;
-  margin-left: 1%;
-  position: absolute;
-  width: 6.5%;
+  margin-top: 10%;
+  margin-left: 10%;
+  width: 75%;
   background: var(--main-color);
   color: black;
   border: none;
-  padding: 5px;
+  padding: 1% 1.9%;
   border-radius: 10px;
   text-align: center;
   border: 1px solid var(--main-color);
-  margin-top: 20%;
-  margin-left: 3.2%;
   -webkit-box-shadow: var(--item-shadow);
   -moz-box-shadow: var(--item-shadow);
   box-shadow: var(--item-shadow);
@@ -153,7 +157,7 @@ input[type=number]::-webkit-outer-spin-button {
 #drag2 > div:active {
   -webkit-animation: wiggle 0.3s 0s infinite ease-in;
   animation: wiggle 0.3s 0s infinite ease-in;
-  border: 2px solid rgb(212, 212, 212);
+  border: 2px solid rgb(145, 9, 9);
 }
 
 
@@ -172,25 +176,34 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .cash {
-  width: 12%;
-  height: 5%;
+  width: 33%;
+  height: 30px;
   background: rgb(25, 25, 35);
-  position: absolute;
   color: var(--main-color);
   text-align: center;
   margin-left: 2%;
-  margin-top: 51.2%;
-  border: 1px solid var(--main-color);
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.cash i {
+  margin: 0;
+  float:left;
+  left: 10px;
+
 }
 
 #cash::after {
   content: '$';
   color: gray;
-  margin-left: 4px;
+  margin-left: 75px;
+  float: right;
+  text-align: right;
+  align-items: center;
 }
 
 #cash {
-  margin-top: 5%;
   font-size: 20px;
 }
 
@@ -207,80 +220,85 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 #job-box {
-  border: 1px solid var(--main-color);
-  padding: 20px;
+  border: 1px solid var(--item-border);
+  padding: 10px 10px 10px 10px;
+  position: absolute;
+  top: 100%;
+  width: 50%;
+  background-color: rgb(25, 25, 35);
 }
 
 .blackmoney {
-  width: 12%;
-  height: 5%;
+  width: 33%;
+  height: 30px;
   background: rgb(25, 25, 35);
-  position: absolute;
   color: var(--main-color);
   text-align: center;
-  margin-left: 14%;
-  margin-top: 51.2%;
-  border: 1px solid var(--main-color);
+  position: relative;
+  display: flex;
+  align-items: center;
 }
 
 #blackmoney::after {
   content: '$';
   color: gray;
-  margin-left: 4px;
+  margin-left: 75px;
+  float: right;
+  text-align: right;
+  align-items: center;
 }
 
 #blackmoney {
-  margin-top: 5%;
   font-size: 20px;
 }
 
 .bank {
-  width: 12%;
-  height: 5%;
+  width: 33%;
+  height: 30px;
   background: rgb(25, 25, 35);
-  position: absolute;
+  position: relative;
   color: var(--main-color);
   text-align: center;
-  margin-left: 26%;
-  margin-top: 51.2%;
-  border: 1px solid var(--main-color);
+  display: flex;
+  align-items: center;
 }
 
 .fa-money-check, .fa-money-bill-alt {
   float: left;
   font-size: 190%;
-  margin-left: -42%;
-  position: absolute;
-  margin-top: 4%;
+  
 }
 
 .fa-money-bill {
   color: red;
   float: left;
   font-size: 190%;
-  margin-left: -42%;
-  position: absolute;
-  margin-top: 5%;
 }
 
 #bank::after {
   content: '$';
   color: gray;
-  margin-left: 4px;
+  margin-left: 75px;
+  float: right;
+  text-align: right;
+  align-items: center;
 }
 
 #bank {
-  margin-top: 5%;
+
   font-size: 20px;
 }
 
 .item-container {
-  width: 13%;
-  height: 75.5%;
-  margin-top: 10%;
-  float: right;
+  width: 12%;
+  height: 30%;
+  position: absolute;
+  top: 45%;
+  left: 37%;
   background: rgb(25, 25, 35);
-  margin-right: 3%;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
 }
 
 #item-box {
@@ -307,12 +325,31 @@ input[type=number]::-webkit-outer-spin-button {
 
 /* CLASSES */
 
+.item-test {
+  height: 100px;
+  width: 100px;
+}
+
+.logo { 
+  top: -7%;
+  left: -5%;
+  position: absolute;
+  z-index: 100;
+  width: 10rem;
+}
+
+.logo img {
+  width: 100%;
+}
+
 .heading {
   color: white;
   position: absolute;
   margin-top: 0.7%;
-  margin-left: 3.8%;
-  font-size: 100%;
+  margin-left: 10%;
+  font-size: 220%;
+  font-family: 'SignPainter';
+  z-index: 100;
 }
 
 .heading-2 {	
@@ -342,26 +379,40 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .item-section {
-    width: 40%;
-    height: 91%;
+    width: 35%;
+    height: 80%;
     margin-top: 6%;
     margin-left: 2%;
     float: left;
     background: no-repeat;
     background-size: 90%;
+    position: relative;
+    overflow: visible;
 }
 
 .item-section {
 	background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0OTkgNjI3Ij48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6IzE5MTkyMzt9PC9zdHlsZT48L2RlZnM+PHRpdGxlPmludmVudG9yeVNWRzwvdGl0bGU+PGcgaWQ9IkxhZ2VyXzIiIGRhdGEtbmFtZT0iTGFnZXIgMiI+PGcgaWQ9IkxhZ2VyXzEtMiIgZGF0YS1uYW1lPSJMYWdlciAxIj48cG9seWdvbiBjbGFzcz0iY2xzLTEiIHBvaW50cz0iMTI3IDAgMCAwIDAgNDEgMCAyNjkgMCA2MjcgNDk5IDYyNyA0OTkgNDEgMTY1IDQwIDEyNyAwIi8+PC9nPjwvZz48L3N2Zz4=);
+  background-size: cover;
 }
 
 .item-inner {
     height: 85%;
-    width: 88%;
+    width: 98%;
     float: left;
     overflow-y: scroll;
-    margin-top: 8%;
+    margin-top: 12%;
     margin-left: 2%;
+    
+}
+
+.money-wrapper {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 30px;
+  display: flex;
+  flex-wrap: nowrap;
 }
 
 #drag1 {
