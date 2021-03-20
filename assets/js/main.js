@@ -1,6 +1,6 @@
 $('document').ready(function() {
 
-    //$('.overlay').hide();
+    $('.overlay').hide();
 
     window.addEventListener('message', function(event) {
         if (event.data.action == 'open') {
