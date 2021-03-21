@@ -7,9 +7,8 @@
 }
 
 @font-face {
-  font-family: SignPainter;
-  src: url('../fonts/SignPainter-HouseScript.ttf');
-  /* src: url('https://mega.nz/file/O343AALS#WrCcEgqWghiCBtwUybEPmA9yXndHealOqsIqtxkd7Cw'); */
+  font-family: "SignPainter";
+  src: url("../fonts/SignPainter-HouseScript.ttf") format("truetype");
 }
 
 *:focus {
@@ -52,13 +51,11 @@ html {
   box-shadow: var(--item-shadow);
   border-radius: var(--item-border-radius);
   border: var(--item-border);
-  z-index: 10;  
 }
 
 .default:hover {
-  transform: scale(2.0);
-  transition: 0.2s;
-  z-index: 10;
+  transform: scale(1.5);
+  transition: 0.3s;
 }
 
 input[type="number"]::-webkit-inner-spin-button,
@@ -67,7 +64,7 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 .item-inner::-webkit-scrollbar-track {
-  border: 1px solid rgb(25, 25, 25);
+  border: 1px solid var(--main-color);
   background-color: rgb(25, 25, 25);
 }
 
@@ -77,6 +74,7 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 .item-inner::-webkit-scrollbar-thumb {
+  /* background-color: var(--main-color);	 */
   background-color: rgb(25, 25, 25);
 }
 
@@ -91,7 +89,7 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 #drag1::-webkit-scrollbar-thumb {
-  background-color: rgb(25, 25, 25);
+  background-color: rgb(255, 255, 255);
 }
 
 /* ID's */
@@ -355,14 +353,6 @@ input[type="number"]::-webkit-outer-spin-button {
 .item {
   position: relative;
 }
-/* .logo { */
-  /* top: -6%; */
-  /* left: -7%; */
-  /* position: absolute; */
-  /* z-index: 100; */
-  /* width: 30%; */
-/* } */
-
 .logo {
   top: -6%;
   left: -7%;
@@ -378,11 +368,11 @@ input[type="number"]::-webkit-outer-spin-button {
 .heading {
   color: white;
   position: absolute;
-  margin-top: 1%;
-  margin-left: 20%;
-  font-size: 300%;
-  font-family: SignPainter;
-  z-index: 1;
+  margin-top: 0.7%;
+  margin-left: 18%;
+  font-size: 220%;
+  font-family: "SignPainter";
+  z-index: 100;
 }
 
 .heading-2 {
@@ -425,25 +415,24 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 .item-section {
-  background-image: none;
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0OTkgNjI3Ij48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6IzE5MTkyMzt9PC9zdHlsZT48L2RlZnM+PHRpdGxlPmludmVudG9yeVNWRzwvdGl0bGU+PGcgaWQ9IkxhZ2VyXzIiIGRhdGEtbmFtZT0iTGFnZXIgMiI+PGcgaWQ9IkxhZ2VyXzEtMiIgZGF0YS1uYW1lPSJMYWdlciAxIj48cG9seWdvbiBjbGFzcz0iY2xzLTEiIHBvaW50cz0iMTI3IDAgMCAwIDAgNDEgMCAyNjkgMCA2MjcgNDk5IDYyNyA0OTkgNDEgMTY1IDQwIDEyNyAwIi8+PC9nPjwvZz48L3N2Zz4=);
   background-size: cover;
   background-color: rgb(25, 25, 25);
 }
 
-.topbar {
-  position: relative;
-  height: 10%;
-}
-
 .item-inner {
-  padding-top: 5%;
-  height: calc(90% - 56px);
+  height: calc(95% - 56px);
   width: 98%;
   float: left;
   overflow-y: scroll;
 
   margin-left: 2%;
   background-color: rgb(25, 25, 25);
+}
+
+.topbar {
+  position: relative;
+  height: 8%;
 }
 
 .money-wrapper {
