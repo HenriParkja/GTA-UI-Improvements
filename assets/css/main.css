@@ -421,13 +421,18 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 .item-inner {
-  height: 95%;
+  height: calc(95% - 56px);
   width: 98%;
   float: left;
   overflow-y: scroll;
-  padding-top: 12%;
+
   margin-left: 2%;
   background-color: rgb(25, 25, 25);
+}
+
+.topbar {
+  position: relative;
+  height: 8%;
 }
 
 .money-wrapper {
