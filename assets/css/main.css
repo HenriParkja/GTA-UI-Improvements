@@ -53,6 +53,11 @@ html {
   border: var(--item-border);
 }
 
+.default:hover {
+  transform: scale(1.5);
+  transition: 0.3s;
+}
+
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
   -webkit-appearance: none;
