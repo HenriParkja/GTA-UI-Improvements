@@ -161,7 +161,6 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 .cash i {
-  margin: 0;
   float: left;
   left: 10px;
 }
