@@ -1,13 +1,13 @@
 /* HTML */
 
 * {
-    font-family: 'Open Sans', sans-serif;
-    margin: 0;
-    overflow: hidden;
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+  overflow: hidden;
 }
 
 @font-face {
-  font-family:"SignPainter";
+  font-family: "SignPainter";
   src: url("../fonts/SignPainter-HouseScript.ttf") format("truetype");
 }
 
@@ -16,21 +16,22 @@
 }
 
 html {
-    font-family: 'Open Sans', sans-serif;
-    margin: 0;
-    --item-text-color: white;
-    --item-padding: 1px;
-    --item-height: 15%;
-    --item-width: 15%;
-    --item-float: left;
-    --item-bg-position: center;
-    --item-bg-color: rgb(31, 30, 43);
-    --item-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
-    --item-border-radius: 5px;
-    --item-border: rgb(145, 9, 9) solid 1px;
-    --item-margin: 1%;
-    --main-color: rgb(0, 230, 247);
-    --btn-bg-color: rgb(145, 9, 9);
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+  --item-text-color: white;
+  --item-padding: 1px;
+  --item-height: 15%;
+  --item-width: 15%;
+  --item-float: left;
+  --item-bg-position: center;
+  --item-bg-color: rgb(25, 25, 25);
+  --item-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
+  --item-border-radius: 5px;
+  --item-border: rgb(145, 9, 9) solid 1px;
+  --item-margin: 1%;
+  /* --main-color: rgb(0, 230, 247); */
+  --main-color: rgb(255, 255, 255);
+  --btn-bg-color: rgb(145, 9, 9);
 }
 
 .default {
@@ -43,7 +44,8 @@ html {
   float: var(--item-float);
   background-position: var(--item-bg-position);
   color: var(--item-text-color);
-  background-color: var(--item-bg-color);
+  /* background-color: var(--item-bg-color); */
+  background-color: rgb(25, 25, 25);
   -webkit-box-shadow: var(--item-shadow);
   -moz-box-shadow: var(--item-shadow);
   box-shadow: var(--item-shadow);
@@ -51,44 +53,38 @@ html {
   border: var(--item-border);
 }
 
-
-input[type=number]::-webkit-inner-spin-button, 
-input[type=number]::-webkit-outer-spin-button { 
-  -webkit-appearance: none; 
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
 }
 
-.item-inner::-webkit-scrollbar-track
-{
-	border: 1px solid var(--main-color);
-	background-color: rgb(25, 25, 35);
+.item-inner::-webkit-scrollbar-track {
+  border: 1px solid var(--main-color);
+  background-color: rgb(25, 25, 25);
 }
 
-.item-inner::-webkit-scrollbar
-{
-	width: 10px;
-	background-color: rgb(25, 25, 35);
+.item-inner::-webkit-scrollbar {
+  width: 20px;
+  background-color: rgb(25, 25, 25);
 }
 
-.item-inner::-webkit-scrollbar-thumb
-{
-	background-color: var(--main-color);	
+.item-inner::-webkit-scrollbar-thumb {
+  /* background-color: var(--main-color);	 */
+  background-color: rgb(25, 25, 25);
 }
 
-#drag1::-webkit-scrollbar-track
-{
-	border: 1px solid var(--main-color);
-	background-color: rgb(25, 25, 35);
+#drag1::-webkit-scrollbar-track {
+  border: 1px solid var(--main-color);
+  background-color: rgb(25, 25, 25);
 }
 
-#drag1::-webkit-scrollbar
-{
-	width: 10px;
-	background-color: rgb(25, 25, 35);
+#drag1::-webkit-scrollbar {
+  width: 10px;
+  background-color: rgb(25, 25, 25);
 }
 
-#drag1::-webkit-scrollbar-thumb
-{
-	background-color: rgb(0, 230, 247);	
+#drag1::-webkit-scrollbar-thumb {
+  background-color: rgb(255, 255, 255);
 }
 
 /* ID's */
@@ -98,16 +94,15 @@ input[type=number]::-webkit-outer-spin-button {
 
 #button-use:hover {
   transition: 500ms;
-  background: white
+  background: white;
 }
 
 #button:hover {
   transition: 500ms;
-  background: white
+  background: white;
 }
 
 #button {
-
 }
 
 #drop-count {
@@ -134,7 +129,6 @@ input[type=number]::-webkit-outer-spin-button {
   border: 2px solid rgb(145, 9, 9);
 }
 
-
 .fa-box-open {
   color: var(--main-color);
   padding: 5px;
@@ -152,7 +146,7 @@ input[type=number]::-webkit-outer-spin-button {
 .cash {
   width: 33%;
   height: 30px;
-  background: rgb(25, 25, 35);
+  background: rgb(25, 25, 25);
   color: var(--main-color);
   text-align: center;
   margin-left: 2%;
@@ -163,15 +157,14 @@ input[type=number]::-webkit-outer-spin-button {
 
 .cash i {
   margin: 0;
-  float:left;
+  float: left;
   left: 10px;
-
 }
 
 #cash::after {
-  content: '$';
+  content: "$";
   color: gray;
-  margin-left: 75px;
+  margin-left: 10px;
   float: right;
   text-align: right;
   align-items: center;
@@ -180,8 +173,6 @@ input[type=number]::-webkit-outer-spin-button {
 #cash {
   font-size: 20px;
 }
-
-
 
 #job {
   color: var(--main-color);
@@ -199,13 +190,13 @@ input[type=number]::-webkit-outer-spin-button {
   position: absolute;
   top: 100%;
   width: calc(100% + 30% - 20px);
-  background-color: rgb(25, 25, 35);
+  background-color: rgb(25, 25, 25);
 }
 
 .blackmoney {
   width: 33%;
   height: 30px;
-  background: rgb(25, 25, 35);
+  background: rgb(25, 25, 25);
   color: var(--main-color);
   text-align: center;
   position: relative;
@@ -214,9 +205,9 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 #blackmoney::after {
-  content: '$';
+  content: "$";
   color: gray;
-  margin-left: 75px;
+  margin-left: 10px;
   float: right;
   text-align: right;
   align-items: center;
@@ -229,7 +220,7 @@ input[type=number]::-webkit-outer-spin-button {
 .bank {
   width: 33%;
   height: 30px;
-  background: rgb(25, 25, 35);
+  background: rgb(25, 25, 25);
   position: relative;
   color: var(--main-color);
   text-align: center;
@@ -237,10 +228,10 @@ input[type=number]::-webkit-outer-spin-button {
   align-items: center;
 }
 
-.fa-money-check, .fa-money-bill-alt {
+.fa-money-check,
+.fa-money-bill-alt {
   float: left;
   font-size: 190%;
-  
 }
 
 .fa-money-bill {
@@ -250,16 +241,15 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 #bank::after {
-  content: '$';
+  content: "$";
   color: gray;
-  margin-left: 75px;
+  margin-left: 10px;
   float: right;
   text-align: right;
   align-items: center;
 }
 
 #bank {
-
   font-size: 20px;
 }
 
@@ -270,7 +260,7 @@ input[type=number]::-webkit-outer-spin-button {
   bottom: 0;
   right: 0;
   margin-right: -30%;
-  background: rgb(25, 25, 35);
+  background: rgb(25, 25, 25);
   z-index: 999;
   display: flex;
   flex-direction: column;
@@ -284,7 +274,8 @@ input[type=number]::-webkit-outer-spin-button {
   -webkit-box-shadow: var(--item-shadow);
   -moz-box-shadow: var(--item-shadow);
   box-shadow: var(--item-shadow);
-  background: var(--item-bg-color);
+  /* background: var(--item-bg-color); */
+  background-color: rgb(25, 25, 25);
 }
 
 #item-box-2 {
@@ -301,7 +292,6 @@ input[type=number]::-webkit-outer-spin-button {
 /* CLASSES */
 
 .btn {
-
   border: none;
   position: relative;
   padding: 1% 2.2%;
@@ -325,16 +315,42 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .item-test {
-  height: 100px;
+  height: 80px;
   width: 100px;
+  padding: 1px;
+  color: white;
+  height: 16%;
+  width: 17%;
+  float: left;
+  background-position: bottom;
+  background-color: rgba(31, 30, 43, 1);
+  box-shadow: 11px 15px 13px 0px rgba(0, 0, 0, 0.75);
+  border-radius: 5px;
+  border: rgb(145, 9, 9) solid 1px;
+  margin: 1%;
+  position: relative;
 }
 
-.logo { 
-  top: -7%;
-  left: -5%;
+
+.item-test-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(31,30,43,1);
+  z-index: 0;
+}
+
+.item {
+  position: relative;
+}
+.logo {
+  top: -6%;
+  left: -7%;
   position: absolute;
   z-index: 100;
-  width: 10rem;
+  width: 30%;
 }
 
 .logo img {
@@ -345,13 +361,13 @@ input[type=number]::-webkit-outer-spin-button {
   color: white;
   position: absolute;
   margin-top: 0.7%;
-  margin-left: 10%;
+  margin-left: 18%;
   font-size: 220%;
-  font-family: 'SignPainter';
+  font-family: "SignPainter";
   z-index: 100;
 }
 
-.heading-2 {	
+.heading-2 {
   color: white;
   position: absolute;
   margin-top: 0.7%;
@@ -360,10 +376,10 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .overlay {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    position: absolute;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  position: absolute;
 }
 
 .item-inner-2 {
@@ -372,36 +388,38 @@ input[type=number]::-webkit-outer-spin-button {
   float: left;
   margin-right: 2%;
   background: no-repeat;
-  background-size: 150%; 
+  background-size: 150%;
   margin-left: 38%;
   position: absolute;
 }
 
 .item-section {
-    width: 35%;
-    height: 80%;
-    margin-top: 6%;
-    margin-left: 2%;
-    float: left;
-    background: no-repeat;
-    background-size: 90%;
-    position: relative;
-    overflow: visible;
+  width: 35%;
+  height: 80%;
+  margin-top: 6%;
+  margin-left: 2%;
+  float: left;
+  background: no-repeat;
+  background-size: 90%;
+  position: relative;
+  overflow: visible;
+  background-color: rgb(25, 25, 25);
 }
 
 .item-section {
-	background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0OTkgNjI3Ij48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6IzE5MTkyMzt9PC9zdHlsZT48L2RlZnM+PHRpdGxlPmludmVudG9yeVNWRzwvdGl0bGU+PGcgaWQ9IkxhZ2VyXzIiIGRhdGEtbmFtZT0iTGFnZXIgMiI+PGcgaWQ9IkxhZ2VyXzEtMiIgZGF0YS1uYW1lPSJMYWdlciAxIj48cG9seWdvbiBjbGFzcz0iY2xzLTEiIHBvaW50cz0iMTI3IDAgMCAwIDAgNDEgMCAyNjkgMCA2MjcgNDk5IDYyNyA0OTkgNDEgMTY1IDQwIDEyNyAwIi8+PC9nPjwvZz48L3N2Zz4=);
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0OTkgNjI3Ij48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6IzE5MTkyMzt9PC9zdHlsZT48L2RlZnM+PHRpdGxlPmludmVudG9yeVNWRzwvdGl0bGU+PGcgaWQ9IkxhZ2VyXzIiIGRhdGEtbmFtZT0iTGFnZXIgMiI+PGcgaWQ9IkxhZ2VyXzEtMiIgZGF0YS1uYW1lPSJMYWdlciAxIj48cG9seWdvbiBjbGFzcz0iY2xzLTEiIHBvaW50cz0iMTI3IDAgMCAwIDAgNDEgMCAyNjkgMCA2MjcgNDk5IDYyNyA0OTkgNDEgMTY1IDQwIDEyNyAwIi8+PC9nPjwvZz48L3N2Zz4=);
   background-size: cover;
+  background-color: rgb(25, 25, 25);
 }
 
 .item-inner {
-    height: 85%;
-    width: 98%;
-    float: left;
-    overflow-y: scroll;
-    margin-top: 12%;
-    margin-left: 2%;
-    
+  height: 95%;
+  width: 98%;
+  float: left;
+  overflow-y: scroll;
+  padding-top: 12%;
+  margin-left: 2%;
+  background-color: rgb(25, 25, 25);
 }
 
 .money-wrapper {
@@ -416,7 +434,7 @@ input[type=number]::-webkit-outer-spin-button {
 
 #drag1 {
   width: 100%;
-  height:100%;
+  height: 100%;
   float: left;
   margin-top: 0%;
   margin-left: 0%;
@@ -424,27 +442,30 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .gu-mirror {
-    cursor:move; cursor:-webkit-grabbing; cursor:-moz-grabbing; cursor:grabbing;
-    position: fixed !important;
-    margin: 0 !important;
-    z-index: 9999 !important;
-    opacity: 1;
-    -webkit-transform: rotate(10deg);
+  cursor: move;
+  cursor: -webkit-grabbing;
+  cursor: -moz-grabbing;
+  cursor: grabbing;
+  position: fixed !important;
+  margin: 0 !important;
+  z-index: 9999 !important;
+  opacity: 1;
+  -webkit-transform: rotate(10deg);
   transform: rotate(10deg);
   -webkit-animation: wiggle 0.3s 0s infinite ease-in;
   animation: wiggle 0.3s 0s infinite ease-in;
-  }
+}
 
 .gu-hide {
   display: none !important;
 }
 
 .gu-unselectable {
-    -webkit-user-select: none !important;
-    -moz-user-select: none !important;
-    -ms-user-select: none !important;
-    user-select: none !important;
-} 
+  -webkit-user-select: none !important;
+  -moz-user-select: none !important;
+  -ms-user-select: none !important;
+  user-select: none !important;
+}
 
 .gu-transit {
   opacity: 1;
@@ -482,5 +503,3 @@ input[type=number]::-webkit-outer-spin-button {
     transform: rotate(0deg);
   }
 }
-
-

@@ -1,6 +1,6 @@
 $('document').ready(function() {
 
-    $('.overlay').hide();
+   // $('.overlay').hide();
 
     window.addEventListener('message', function(event) {
         if (event.data.action == 'open') {
@@ -13,6 +13,7 @@ $('document').ready(function() {
 
         
         function test(){
+            console.log(event.data.items);
             let test = event.data.items
             let test1 = []
             if (test != undefined) {
@@ -26,14 +27,14 @@ $('document').ready(function() {
                 $(`#${item[0]}`).css({
                     'padding': '1px',
                     'color': 'white',
-                    'height': '15%',
-                    'width': '15%',
+                    'height': '16%',
+                    'width': '17%',
                     'float': 'left',
                     'background-position': 'bottom',
                     'background-color': 'rgb(31, 30, 43)',
                     'box-shadow:': '11px 15px 13px 0px rgba(0,0,0,0.75)',
                     'border-radius': '5px',
-                    'border': 'rgb(0, 230, 247) solid 1px',
+                    'border': 'rgb(145, 9, 9) solid 1px',
                     'margin': '1%'
                 })
             })
